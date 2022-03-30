@@ -4,7 +4,7 @@
   "description": "It is a repository template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specifieddddd\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,13 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "commitizen": "^4.2.4"
+    "commitizen": "^4.2.4",
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run stylelintt && npm run eslintt"
+    }
   }
 }
