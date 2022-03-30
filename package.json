@@ -1,0 +1,27 @@
+{
+  "name": "repository-template",
+  "version": "1.0.0",
+  "description": "It is a repository template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunxu42/repository-template.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "arthur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sunxu42/repository-template/issues"
+  },
+  "homepage": "https://github.com/sunxu42/repository-template#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4"
+  }
+}
