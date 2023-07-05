@@ -90,6 +90,47 @@
       "options": {
         "buildTarget": "myngapp:build"
       }
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "./.storybook",
+        "browserTarget": "myngapp:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/myngapp",
+        "configDir": "./.storybook",
+        "browserTarget": "myngapp:build",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "myngapp:build-storybook",
+        "staticFilePath": "dist/storybook/myngapp"
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "myngapp:build-storybook:ci"
+        }
+      }
     }
   }
 }
