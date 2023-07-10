@@ -1,0 +1,17 @@
+version: 2
+mergeable:
+  - when: pull_request.*
+    name: Check WIP
+    validate:
+      - do: label
+        must_exclude:
+          regex: 'WIP :construction:'
+          message: 'Work in progress label is present. Finish your work and remove the label before merging.'
+      - do: label
+        must_exclude:
+          regex: 'frozen :ice_cube'
+          message: 'Frozen label is present. This is very likely not a merge-able PR, but you can still remove the label if you know what you are doing.'
+      - do: label
+        must_exclude:
+          regex: 'do not merge ⛔'
+          message: 'Do not merge label is present. Make sure to solve the reason first, then remove the label to merge.'

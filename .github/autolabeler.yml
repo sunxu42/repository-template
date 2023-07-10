@@ -1,0 +1,3 @@
+'dependencies :package:': [ 'package.json' ]
+
+'aca-new :kick_scooter:': [ 'apps/aca-new/**/*' ]
