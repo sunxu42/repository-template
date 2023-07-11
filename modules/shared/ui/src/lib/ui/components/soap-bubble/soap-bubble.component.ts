@@ -11,5 +11,5 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SoapBubbleComponent {
-
+  public bubbleQuantity = new Array(10);
 }

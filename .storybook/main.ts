@@ -1,11 +1,19 @@
-import type { StorybookConfig } from '@storybook/angular';
+import { StorybookConfig } from '@storybook/types';
 
 const config: StorybookConfig = {
   stories: [
     '../src/app/**/*.stories.@(js|jsx|ts|tsx|mdx)',
     '../modules/**/*.stories.@(js|jsx|ts|tsx|mdx)'
   ],
-  addons: ['@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-essentials',
+    '@storybook/addon-links',
+    'storybook-addon-angular-router',
+    'storybook-dark-mode',
+    'storybook-addon-designs',
+    '@storybook/addon-a11y',
+    '@storybook/addon-storysource'
+  ],
   framework: {
     name: '@storybook/angular',
     options: {}
