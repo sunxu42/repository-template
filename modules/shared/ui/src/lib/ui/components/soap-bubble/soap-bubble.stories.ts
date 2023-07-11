@@ -2,7 +2,7 @@ import { SoapBubbleComponent } from './soap-bubble.component';
 import { Meta } from '@storybook/angular';
 
 export default {
-  title: 'SoapBubbleComponent',
+  title: 'SoapBubble',
   component: SoapBubbleComponent
 } as Meta<SoapBubbleComponent>;
 
